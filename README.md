@@ -5,6 +5,10 @@ Mendukung fitur **CRUD**, **pagination**, **searching**, serta **autentikasi JWT
 
 ---
 
+## End Point
+
+<img width="500" alt="Image" src="https://github.com/user-attachments/assets/36b3d6bf-ffcf-448b-85a4-cf6bf680344c" />
+
 ## Fitur Utama
 - **Authentication:** Login & JWT Token (expired 5 hari)  
 - **Data Sensus Penduduk:** Create, Read, Update, Delete  
