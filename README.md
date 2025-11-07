@@ -3,17 +3,16 @@
 RESTful API untuk sistem pendataan **Sensus Penduduk** menggunakan **CodeIgniter 4** dan **MySQL**.  
 Mendukung fitur **CRUD**, **pagination**, **searching**, serta **autentikasi JWT** dengan masa berlaku token 5 hari.
 
----
+## End Point
+<img width="450" alt="Image" src="https://github.com/user-attachments/assets/f28187bf-2145-41ab-b302-3cfccca0e923" />
 
-## [Dokumentasi Gambar & Test](./DETAIL.md)
+## [Dokumentasi Gambar & Test End Point](./DETAIL.md)
 
 ## Fitur Utama
 - **Authentication:** Login & JWT Token (expired 5 hari)  
 - **Data Sensus Penduduk:** Create, Read, Update, Delete  
 - **Data Master Kota:** List dengan pagination & search  
-- **Proteksi API:** Token-based access untuk setiap endpoint  
-
----
+- **Proteksi API:** Token-based access untuk setiap endpoint
 
 ## Teknologi
 - PHP 8+  
