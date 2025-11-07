@@ -4,9 +4,10 @@ RESTful API untuk sistem pendataan **Sensus Penduduk** menggunakan **CodeIgniter
 Mendukung fitur **CRUD**, **pagination**, **searching**, serta **autentikasi JWT** dengan masa berlaku token 5 hari.
 
 ## End Point
-<img width="450" alt="Image" src="https://github.com/user-attachments/assets/f28187bf-2145-41ab-b302-3cfccca0e923" />
+<img width="380" alt="Image" src="https://github.com/user-attachments/assets/f03ee202-b99c-4b10-aeb0-77fefb95d4a5" />
 
-## [Dokumentasi Gambar & Test End Point](./DETAIL.md)
+### [Dokumentasi Gambar & Test End Point](./DETAIL.md)
+### [Panduan Instalasi](./INSTALLATION.md)
 
 ## Fitur Utama
 - **Authentication:** Login & JWT Token (expired 5 hari)  
