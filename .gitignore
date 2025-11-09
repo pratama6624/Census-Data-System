@@ -39,59 +39,63 @@ $RECYCLE.BIN/
 #-------------------------
 # Environment Files
 #-------------------------
-# These should never be under version control,
-# as it poses a security risk.
+# Jangan commit file environment
 .env
 .vagrant
 Vagrantfile
 
-#-------------------------
-# Temporary Files
-#-------------------------
-writable/cache/*
-!writable/cache/index.html
-
-writable/logs/*
-!writable/logs/index.html
-
-writable/session/*
-!writable/session/index.html
-
-writable/uploads/*
-!writable/uploads/index.html
-
-writable/debugbar/*
-!writable/debugbar/index.html
-
-php_errors.log
+# Kalau pakai .env di masing-masing project:
+backend-ci4/.env
+backend-vapor/.env
 
 #-------------------------
-# User Guide Temp Files
+# Temporary / Runtime Files (CodeIgniter - backend-ci4)
 #-------------------------
-user_guide_src/build/*
-user_guide_src/cilexer/build/*
-user_guide_src/cilexer/dist/*
-user_guide_src/cilexer/pycilexer.egg-info/*
+
+backend-ci4/writable/cache/*
+!backend-ci4/writable/cache/index.html
+
+backend-ci4/writable/logs/*
+!backend-ci4/writable/logs/index.html
+
+backend-ci4/writable/session/*
+!backend-ci4/writable/session/index.html
+
+backend-ci4/writable/uploads/*
+!backend-ci4/writable/uploads/index.html
+
+backend-ci4/writable/debugbar/*
+!backend-ci4/writable/debugbar/index.html
+
+backend-ci4/php_errors.log
+
+#-------------------------
+# User Guide Temp Files (CI4)
+#-------------------------
+backend-ci4/user_guide_src/build/*
+backend-ci4/user_guide_src/cilexer/build/*
+backend-ci4/user_guide_src/cilexer/dist/*
+backend-ci4/user_guide_src/cilexer/pycilexer.egg-info/*
 
 #-------------------------
 # Test Files
 #-------------------------
-tests/coverage*
+backend-ci4/tests/coverage*
 
-# Don't save phpunit under version control.
-phpunit
+# Jangan simpan phpunit binary di repo
+backend-ci4/phpunit
 
 #-------------------------
-# Composer
+# Composer (CI4)
 #-------------------------
-vendor/
+backend-ci4/vendor/
 
 #-------------------------
 # IDE / Development Files
 #-------------------------
 
 # Modules Testing
-_modules/*
+backend-ci4/_modules/*
 
 # phpenv local config
 .php-version
@@ -117,10 +121,18 @@ _modules/*
 *.sublime-workspace
 *.sublime-project
 .phpintel
-/api/
 
 # Visual Studio Code
 .vscode/
 
+# Results / coverage config
 /results/
 /phpunit*.xml
+
+#-------------------------
+# Vapor / Swift (kalau nanti ditambah backend-vapor)
+#-------------------------
+backend-vapor/.build/
+backend-vapor/.swiftpm/
+backend-vapor/DerivedData/
+backend-vapor/.DS_Store

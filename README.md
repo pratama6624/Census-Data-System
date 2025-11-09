@@ -1,7 +1,7 @@
-# Sensus API CI4
+# Sensus Data Penduduk RESTful API
 
-RESTful API untuk sistem pendataan **Sensus Penduduk** menggunakan **CodeIgniter 4** dan **MySQL**.  
-Mendukung fitur **CRUD**, **pagination**, **searching**, serta **autentikasi JWT** dengan masa berlaku token 5 hari.
+### [-> Versi Codeigniter 4 (UTS Pemrograman Fullstack - Pak Sandy)](./backend-ci4/READMEBECI4.md)
+### [-> Versi Vapor (Latihan Framework Swift Backend)]()
 
 ## End Point
 <img width="380" alt="Image" src="https://github.com/user-attachments/assets/f03ee202-b99c-4b10-aeb0-77fefb95d4a5" />
@@ -12,20 +12,14 @@ Mendukung fitur **CRUD**, **pagination**, **searching**, serta **autentikasi JWT
 ## Fitur Utama
 - **Authentication:** Login & JWT Token (expired 5 hari)  
 - **Data Sensus Penduduk:** Create, Read, Update, Delete  
-- **Data Master Kota:** List dengan pagination & search  
+- **Data Master Kota:** List dengan pagination & search. 
 - **Proteksi API:** Token-based access untuk setiap endpoint
-
-## Teknologi
-- PHP 8+  
-- CodeIgniter 4 (RESTful)  
-- MySQL Database  
-- JWT (Firebase PHP JWT Library)
 
 ## Author
 **Kukuh Nur Pratama**  
 iOS Developer and Apple Ecosystem Enthusiast  
 GitHub: [pratama6624](https://github.com/pratama6624)  
-LinkedIn: [linkedin.com/in/kukuhpratama](https://www.linkedin.com/in/kukuhpratama)
+LinkedIn: [https://www.linkedin.com/in/kukuhnurpratama-iosdeveloper](https://www.linkedin.com/in/kukuhnurpratama-iosdeveloper)
 
 ---
 
