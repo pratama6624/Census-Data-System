@@ -136,3 +136,30 @@ backend-vapor/.build/
 backend-vapor/.swiftpm/
 backend-vapor/DerivedData/
 backend-vapor/.DS_Store
+
+
+#=============================
+# Vapor (Swift) Project
+#=============================
+
+# Build & Dependencies
+backend-vapor/.build/
+backend-vapor/Packages/
+backend-vapor/.swiftpm/
+backend-vapor/DerivedData/
+
+# Xcode & macOS
+backend-vapor/*.xcodeproj
+backend-vapor/xcuserdata/
+backend-vapor/.DS_Store
+
+# Local Database
+backend-vapor/db.sqlite
+
+# Environment
+backend-vapor/.env
+backend-vapor/.env.*
+!backend-vapor/.env.example
+
+# Profiling & Reports
+backend-vapor/default.profraw
