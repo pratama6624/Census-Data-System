@@ -2,7 +2,10 @@ import Fluent
 import Vapor
 
 func routes(_ app: Application) throws {
-app.get { req async in
+    app.routes.caseInsensitive = true
+    app.http.client.configuration.redirectConfiguration = .disallow
+    
+    app.get { req async in
         "It works!"
     }
 
@@ -11,4 +14,8 @@ app.get { req async in
     }
 
     try app.register(collection: TodoController())
+    
+    // Routes Auth
+    try app.register(collection: AuthController())
+    
 }
