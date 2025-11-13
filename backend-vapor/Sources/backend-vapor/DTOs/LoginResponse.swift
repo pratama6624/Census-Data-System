@@ -7,8 +7,22 @@
 
 import Vapor
 
-struct LoginResponse: Content {
+struct UserDTO: Content {
+    let id: String
+    let name: String
+    let email: String
+    let role: String
+}
+
+struct LoginData: Content {
     let token: String
-    let tokenType: String
-    let expiresIn: Int
+    let token_type: String
+    let expires_in: Int
+    let user: UserDTO
+}
+
+struct ApiResponse<T: Content>: Content {
+    let status: Bool
+    let message: String
+    let data: T
 }
