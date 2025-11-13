@@ -4,12 +4,15 @@ import FluentMySQLDriver
 import Vapor
 import JWT
 import JWTKit
+import Crypto
 
 // configures your application
 public func configure(_ app: Application) async throws {
     // uncomment to serve files from /Public folder
     // app.middleware.use(FileMiddleware(publicDirectory: app.directory.publicDirectory))
 
+    app.passwords.use(.bcrypt)
+    
     app.databases.use(DatabaseConfigurationFactory.mysql(
         hostname: Environment.get("DATABASE_HOST") ?? "127.0.0.1",
         port: Environment.get("DATABASE_PORT").flatMap(Int.init(_:)) ?? 3306,
@@ -25,10 +28,11 @@ public func configure(_ app: Application) async throws {
     let hmacKey = HMACKey(from: Data(secret.utf8))
     await app.jwt.keys.add(hmac: hmacKey, digestAlgorithm: .sha256)
     
-    // Migration
+    // Migration & Seeder Users Table
     app.migrations.add(CreateUserMigration())
+    app.migrations.add(SeedUsersMigration())
     
-    try app.autoMigrate().wait()
+    try await app.autoMigrate().get()
 
     // register routes
     try routes(app)

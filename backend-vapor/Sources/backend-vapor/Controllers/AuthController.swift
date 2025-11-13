@@ -8,6 +8,7 @@
 import Vapor
 import Fluent
 import JWT
+import Crypto
 
 struct AuthController: RouteCollection {
     func boot(routes: any RoutesBuilder) throws {
@@ -28,10 +29,10 @@ struct AuthController: RouteCollection {
         guard let user = try await User.query(on: req.db)
             .filter(\.$email == body.email)
                 .first() else {
-            throw Abort(.unauthorized, reason: "User tidak ditemukan")
+            throw Abort(.unauthorized, reason: "User not found")
         }
         
-        guard user.password == body.password else {
+        guard try await req.password.async.verify(body.password, created: user.password) else {
             throw Abort(.unauthorized, reason: "Password salah")
         }
         
@@ -60,7 +61,7 @@ struct AuthController: RouteCollection {
             )
         )
 
-        return ApiResponse(status: true, message: "Login berhasil", data: data)
+        return ApiResponse(status: true, message: "Login success", data: data)
     }
     
     // -> GET /api/me (Cek token validation
