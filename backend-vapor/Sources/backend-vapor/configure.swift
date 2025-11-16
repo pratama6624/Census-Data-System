@@ -31,6 +31,8 @@ public func configure(_ app: Application) async throws {
     // Migration & Seeder Users Table
     app.migrations.add(CreateUserMigration())
     app.migrations.add(SeedUsersMigration())
+    app.migrations.add(CreateCitiesMigration())
+    app.migrations.add(SeedCitiesMigration())
     
     try await app.autoMigrate().get()
 
